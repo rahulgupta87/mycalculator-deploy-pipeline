@@ -41,7 +41,7 @@ class CalculatorDeployStack(Stack):
         approval_stage.add_action(approval_action)
 
         env_variables = {
-            "ENVEKS_CLUSTER_NAME_VAR_1": "value_1"
+            "EKS_CLUSTER_NAME_VAR_1": "eks-dev-cluster"
         }
 
         projectBuild = codebuild.PipelineProject(
@@ -86,5 +86,5 @@ class CalculatorDeployStack(Stack):
             input=source_output
         )
 
-        build_stage = pipeline.add_stage(stage_name="Build&Deploy")
+        build_stage = pipeline.add_stage(stage_name="Build")
         build_stage.add_action(build_action)

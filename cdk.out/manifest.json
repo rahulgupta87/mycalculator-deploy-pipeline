@@ -1,0 +1,154 @@
+{
+  "version": "29.0.0",
+  "artifacts": {
+    "CalculatorDeployStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "CalculatorDeployStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "CalculatorDeployStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "CalculatorDeployStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/31d0fb4040919980c2fcd21b68faeba946c3eaf506ff4f5a8b100f9ef9c40dae.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "CalculatorDeployStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "CalculatorDeployStack.assets"
+      ],
+      "metadata": {
+        "/CalculatorDeployStack/calculatorAppCodePipeline/ArtifactsBucketEncryptionKey/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "calculatorAppCodePipelineArtifactsBucketEncryptionKey6A1CCA66"
+          }
+        ],
+        "/CalculatorDeployStack/calculatorAppCodePipeline/ArtifactsBucketEncryptionKeyAlias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "calculatorAppCodePipelineArtifactsBucketEncryptionKeyAliasC33AB571"
+          }
+        ],
+        "/CalculatorDeployStack/calculatorAppCodePipeline/ArtifactsBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "calculatorAppCodePipelineArtifactsBucketA33D8D48"
+          }
+        ],
+        "/CalculatorDeployStack/calculatorAppCodePipeline/ArtifactsBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "calculatorAppCodePipelineArtifactsBucketPolicy965CF81C"
+          }
+        ],
+        "/CalculatorDeployStack/calculatorAppCodePipeline/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "calculatorAppCodePipelineRole0BF3C70C"
+          }
+        ],
+        "/CalculatorDeployStack/calculatorAppCodePipeline/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "calculatorAppCodePipelineRoleDefaultPolicy98E22150"
+          }
+        ],
+        "/CalculatorDeployStack/calculatorAppCodePipeline/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "calculatorAppCodePipelineDAA38B73"
+          }
+        ],
+        "/CalculatorDeployStack/calculatorAppCodePipeline/Source/SourceAction/WebhookResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "calculatorAppCodePipelineSourceSourceActionWebhookResource29F3C6D4"
+          }
+        ],
+        "/CalculatorDeployStack/calculatorAppCodePipeline/Approval/ApprovalAction/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "calculatorAppCodePipelineApprovalApprovalActionCodePipelineActionRoleEED399A9"
+          }
+        ],
+        "/CalculatorDeployStack/calculatorAppCodePipeline/Build-Deploy/BuildDeployAction/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "calculatorAppCodePipelineBuildDeployBuildDeployActionCodePipelineActionRole4461BB59"
+          }
+        ],
+        "/CalculatorDeployStack/calculatorAppCodePipeline/Build-Deploy/BuildDeployAction/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "calculatorAppCodePipelineBuildDeployBuildDeployActionCodePipelineActionRoleDefaultPolicy7039FD18"
+          }
+        ],
+        "/CalculatorDeployStack/calculatorAppBuildProject/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "calculatorAppBuildProjectRole45F05BB8"
+          }
+        ],
+        "/CalculatorDeployStack/calculatorAppBuildProject/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "calculatorAppBuildProjectRoleDefaultPolicy8FB5EA3D"
+          }
+        ],
+        "/CalculatorDeployStack/calculatorAppBuildProject/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "calculatorAppBuildProject5F02F5B7"
+          }
+        ],
+        "/CalculatorDeployStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/CalculatorDeployStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/CalculatorDeployStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/CalculatorDeployStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "CalculatorDeployStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
